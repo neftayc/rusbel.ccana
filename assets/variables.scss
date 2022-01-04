@@ -2,3 +2,15 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+:root {
+  --box-shadow: rgba(2, 12, 27, 0.7);
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+  --pink: #f57dff;
+  --blue: #57cbff;
+}
+.theme--dark.v-application {
+  background-color: var(--v-background-base) !important;
+}

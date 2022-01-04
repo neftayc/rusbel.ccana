@@ -1,8 +1,10 @@
+/* eslint-disable no-undef */
 import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -63,7 +65,10 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: false,
+      options: {
+        customProperties: true,
+      },
+      dark: true,
       themes: {
         light: {
           primary: '#4b67ca',
@@ -75,9 +80,11 @@ export default {
           success: colors.green.accent3,
         },
         dark: {
-          primary: '#4b67ca',
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          background: '#020c1b',
+          'primary-dark': '#0a192f',
+          primary: '#112240',
+          secondary: '#0ff',
+          accent: '#0fb',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
